@@ -84,7 +84,7 @@ def upload_video():
         
     cap.release()
     if frames == 0:
-        return "Sorry we couldn't capture your head pose"
+        return "jsonify({"status": "error", "message": "couldn't capture head posture"})
     
     return jsonify({"average_turining" : avg_yaw/frames , 
               "average_nodding" : avg_pitch/frames , 
