@@ -86,9 +86,9 @@ def upload_video():
     if frames == 0:
         return "Sorry we couldn't capture your head pose"
     
-    return jsonify({"Average Turining" : avg_yaw/frames , 
-              "Average Nodding" : avg_pitch/frames , 
-              "Average Tilting" : avg_roll/frames}
+    return jsonify({"average_turining" : avg_yaw/frames , 
+              "average_nodding" : avg_pitch/frames , 
+              "average_tilting" : avg_roll/frames}
     )
             
 if __name__ == '__main__':
